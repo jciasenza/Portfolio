@@ -1,0 +1,81 @@
+{
+  "name": "Juan Carlos Iasenza",
+  "title": "Full Stack Developer",
+  "email": "iasenzajuancarlos@gmail.com",
+  "phone": "+54 11 5809 4982",
+  "location": "Buenos Aires, Argentina",
+  "github": "https://github.com/jcasiasenza",
+  "linkedin": "https://www.linkedin.com/in/juan-carlos-iasenza-811950619/",
+  "summary": "Full Stack Developer with 4+ years of experience developing modern web applications. Solid knowledge in React, JavaScript, Node.js, and Python. Experience working with e-learning platforms and REST APIs.",
+  "experience": [
+    {
+      "position": "Frontend Developer",
+      "company": "Aulasneo",
+      "period": "Oct 2022 - Feb 2026",
+      "description": "Development and maintenance of Open edX e-learning platforms with React and JavaScript."
+    },
+    {
+      "position": "Modern Interfaces Developer",
+      "company": "Aulasneo Owly",
+      "period": "2021 - 2022",
+      "description": "Development of modern interfaces using React, Python, and JavaScript. REST API integration and AI integrations."
+    },
+    {
+      "position": "Developer - Manager Manager",
+      "company": "Arrua y Cardoso S.R.L.",
+      "period": "2010 - 2022",
+      "description": "Development and maintenance of websites. Web and graphic design."
+    },
+    {
+      "position": "Administrative and Operational Manager",
+      "company": "Cosel S.R.L.",
+      "period": "1994 - 2008",
+      "description": "Administrative and operational management of the company."
+    },
+    {
+      "position": "Systems Operator",
+      "company": "Tia S.A.",
+      "period": "1989 - 1994",
+      "description": "Systems operator for barcode codes and administrative tasks."
+    }
+  ],
+  "skills": {
+    "frontend": ["HTML, CSS, JavaScript", "React", "Next.js", "Sass","Bootstrap","Material-UI"],
+    "backend": ["Node.js", "Express", "Python"],
+    "databases": ["PostgreSQL", "SQLite", "MongoDB"],
+    "apis": ["REST APIs", "service integration"],
+    "tools": ["Git", "Linux", "AWS", "Open edX customization"]
+  },
+  "education": [
+    {
+      "degree": "Information Systems Analyst",
+      "school": "Instituto Argentino de Computación (IAC Superior)",
+      "duration": "2 years"
+    },
+    {
+      "degree": "Mechanical Technician",
+      "school": "Secondary School",
+      "duration": "6 years"
+    }
+  ],
+  "courses": [
+    {
+      "name": "Frontend Developer",
+      "provider": "Coderhouse, Self-taught"
+    },
+    {
+      "name": "Backend Developer",
+      "provider": "UTN, Self-taught"
+    }
+  ],
+  "languages": [
+    {
+      "language": "Spanish",
+      "level": "Native"
+    },
+    {
+      "language": "English",
+      "level": "B1 (Intermediate)"
+    }
+  ]
+}

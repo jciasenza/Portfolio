@@ -1,0 +1,81 @@
+{
+  "name": "Juan Carlos Iasenza",
+  "title": "Desarrollador Full Stack",
+  "email": "iasenzajuancarlos@gmail.com",
+  "phone": "+54 11 5809 4982",
+  "location": "Buenos Aires, Argentina",
+  "github": "https://github.com/jcasiasenza",
+  "linkedin": "https://www.linkedin.com/in/juan-carlos-iasenza-811950619/",
+  "summary": "Desarrollador Full Stack con 4+ años de experiencia desarrollando aplicaciones web modernas. Sólido conocimiento en React, JavaScript, Node.js y Python. Experiencia trabajando con plataformas e-learning y REST APIs.",
+  "experience": [
+    {
+      "position": "Desarrollador Frontend",
+      "company": "Aulasneo",
+      "period": "Oct 2022 - Feb 2026",
+      "description": "Desarrollo y mantenimiento de plataformas e-learning Open edX con React y JavaScript."
+    },
+    {
+      "position": "Desarrollador de interfaces modernas",
+      "company": "Aulasneo Owly",
+      "period": "2021 - 2022",
+      "description": "Desarrollo de interfaces modernas utilizando React, Python y JavaScript. Integración de APIs REST y integraciones con IA."
+    },
+    {
+      "position": "Desarrollador - Gestor de Manager",
+      "company": "Arrua y Cardoso S.R.L.",
+      "period": "2010 - 2022",
+      "description": "Desarrollo y mantenimiento de sitios web. Diseño web y gráfico."
+    },
+    {
+      "position": "Gestor administrativo y operativo",
+      "company": "Cosel S.R.L.",
+      "period": "1994 - 2008",
+      "description": "Gestión administrativa y operativa de la empresa."
+    },
+    {
+      "position": "Operador de Sistemas",
+      "company": "Tia S.A.",
+      "period": "1989 - 1994",
+      "description": "Operador de sistemas de codigos de barras y tareas administrativas."
+    }
+  ],
+  "skills": {
+    "frontend": ["HTML, CSS, JavaScript", "React", "Next.js", "Sass","Bootstrap","Material-UI"],
+    "backend": ["Node.js", "Express", "Python"],
+    "databases": ["PostgreSQL", "SQLite", "MongoDB"],
+    "apis": ["REST APIs", "integración de servicios"],
+    "tools": ["Git", "Linux", "AWS", "Open edX customization"]
+  },
+  "education": [
+    {
+      "degree": "Analista de Sistemas de Información",
+      "school": "Instituto Argentino de Computación (IAC Superior)",
+      "duration": "2 años"
+    },
+    {
+      "degree": "Técnico Mecánico",
+      "school": "Secundaria",
+      "duration": "6 años"
+    }
+  ],
+  "courses": [
+    {
+      "name": "Desarrollador Frontend",
+      "provider": "Coderhouse, Autodidacta"
+    },
+    {
+      "name": "Desarrollador Backend",
+      "provider": "UTN, Autodidacta"
+    }
+  ],
+  "languages": [
+    {
+      "language": "Español",
+      "level": "Nativo"
+    },
+    {
+      "language": "Inglés",
+      "level": "B1 (Intermedio)"
+    }
+  ]
+}
