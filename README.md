@@ -151,11 +151,11 @@ npm run lint
 
 ## 📄 Licencia
 
-Este proyecto es de código abierto y está disponible bajo la Licencia MIT.
+Disponible bajo la Licencia MIT.
 
 ## 👨‍💻 Autor
 
-Creado con ❤️ para ayudarte a mostrar tus proyectos
+Creado con ❤️ para mostrar mis proyectos
 
 ## 📞 Soporte
 
@@ -163,4 +163,4 @@ Creado con ❤️ para ayudarte a mostrar tus proyectos
 
 ---
 
-**¡Que disfrutes tu portafolio! 🎉**
+**¡Que disfrutes mi portafolio! 🎉**
