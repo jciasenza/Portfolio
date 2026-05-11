@@ -12,7 +12,7 @@ export async function GET() {
       );
     }
 
-    const url = `https://api.github.com/users/${GITHUB_USERNAME}/repos`;
+    const urlBase = `https://api.github.com/users/${GITHUB_USERNAME}/repos`;
     const headers: HeadersInit = {
       'Accept': 'application/vnd.github.v3+json',
     };
@@ -21,17 +21,30 @@ export async function GET() {
       headers['Authorization'] = `token ${GITHUB_TOKEN}`;
     }
 
-    const response = await fetch(url, { headers });
+    const repos: any[] = [];
+    let page = 1;
+    const perPage = 100;
 
-    if (!response.ok) {
-      throw new Error(`GitHub API error: ${response.status}`);
+    while (true) {
+      const response = await fetch(`${urlBase}?per_page=${perPage}&page=${page}`, { headers });
+
+      if (!response.ok) {
+        throw new Error(`GitHub API error: ${response.status}`);
+      }
+
+      const pageRepos = await response.json();
+      if (!Array.isArray(pageRepos)) {
+        throw new Error('GitHub API returned unexpected data');
+      }
+
+      repos.push(...pageRepos);
+      if (pageRepos.length < perPage) break;
+      page += 1;
     }
 
-    const repos = await response.json();
-
     const publicRepos = repos
-      .filter((repo: any) => !repo.fork) // Excluir forks
-      .sort((a: any, b: any) => b.stargazers_count - a.stargazers_count); // Ordenar por stars
+      .filter((repo: any) => !repo.fork)
+      .sort((a: any, b: any) => b.stargazers_count - a.stargazers_count);
 
     const mappedRepos = await Promise.all(
       publicRepos.map(async (repo: any) => {

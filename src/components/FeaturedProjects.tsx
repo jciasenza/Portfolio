@@ -35,7 +35,7 @@ export default function FeaturedProjects() {
       description: 'Agente de IA revolucionario que transforma la forma en que educadores y estudiantes interactúan con plataformas LMS. Owly proporciona asistencia inteligente, flujos de trabajo automatizados y experiencias de aprendizaje personalizadas mejoradas por análisis de aprendizaje.',
       descriptionEn: 'Revolutionary AI agent that transforms how educators and students interact with LMS platforms. Owly provides intelligent assistance, automated workflows and personalized learning experiences enhanced by learning analytics.',
       url: 'https://www.owly.aulasneo.com/',
-      githubRepo: 'jciasenza/Owly-Chat-Frontend',
+      githubRepo: '',
       technologies: ['React', 'TypeScript', 'Python', 'Django', 'Sass'],
     },
   ];
