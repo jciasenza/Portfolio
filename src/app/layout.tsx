@@ -6,6 +6,9 @@ import { LanguageProvider } from '@/context/LanguageContext';
 export const metadata: Metadata = {
   title: 'Mi Portafolio',
   description: 'Portafolio personal con mis proyectos de GitHub',
+  icons: {
+    icon: '/favicon.svg',
+  },
 };
 
 export default function RootLayout({
