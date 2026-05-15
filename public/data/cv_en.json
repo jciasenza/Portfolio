@@ -9,19 +9,19 @@
   "summary": "Full Stack Developer with 4+ years of experience developing modern web applications. Solid knowledge in React, JavaScript, Node.js, and Python. Experience working with e-learning platforms and REST APIs.",
   "experience": [
     {
+      "position": "Modern Interfaces Developer",
+      "company": "Aulasneo Owly",
+      "period": "2025 - 2026",
+      "description": "Development of modern interfaces using React, Python, and JavaScript. REST API integration and AI integrations."
+    },
+    {
       "position": "Frontend Developer",
       "company": "Aulasneo",
       "period": "Oct 2022 - Feb 2026",
       "description": "Development and maintenance of Open edX e-learning platforms with React and JavaScript."
     },
     {
-      "position": "Modern Interfaces Developer",
-      "company": "Aulasneo Owly",
-      "period": "2021 - 2022",
-      "description": "Development of modern interfaces using React, Python, and JavaScript. REST API integration and AI integrations."
-    },
-    {
-      "position": "Developer - Manager Manager",
+      "position": "Developer - Manager",
       "company": "Arrua y Cardoso S.R.L.",
       "period": "2010 - 2022",
       "description": "Development and maintenance of websites. Web and graphic design."
@@ -41,7 +41,7 @@
   ],
   "skills": {
     "frontend": ["HTML, CSS, JavaScript", "React", "Next.js", "Sass","Bootstrap","Material-UI"],
-    "backend": ["Node.js", "Express", "Python"],
+    "backend": ["Node.js", "Express", "Python", "Django"],
     "databases": ["PostgreSQL", "SQLite", "MongoDB"],
     "apis": ["REST APIs", "service integration"],
     "tools": ["Git", "Linux", "AWS", "Open edX customization"]
