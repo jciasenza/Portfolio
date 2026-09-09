@@ -74,11 +74,13 @@ export default function Projects() {
     const fetchRepositories = async () => {
       try {
         const response = await fetch('/api/repositories');
-        if (!response.ok) throw new Error('Error fetching repositories');
         const data = await response.json();
+        if (!response.ok) {
+          throw new Error(data.error || t.error);
+        }
         setRepositories(data);
       } catch (err) {
-        setError(t.error);
+        setError(err instanceof Error ? err.message : t.error);
         console.error(err);
       } finally {
         setLoading(false);

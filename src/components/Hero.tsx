@@ -1,7 +1,7 @@
 'use client';
 
 import { Container, Typography, Box, Button, IconButton } from '@mui/material';
-import { GitHub, LinkedIn, Mail, WhatsApp, Download } from '@mui/icons-material';
+import { GitHub, LinkedIn, Mail, WhatsApp, Download, LocationOn } from '@mui/icons-material';
 import { useLanguage } from '@/context/LanguageContext';
 
 export default function Hero() {
@@ -29,6 +29,7 @@ export default function Hero() {
   const t = translations[language];
   const email = process.env.NEXT_PUBLIC_EMAIL || 'iasenzajuancarlos@gmail.com';
   const whatsapp = process.env.NEXT_PUBLIC_WHATSAPP || '+541158094982';
+  const location = process.env.NEXT_PUBLIC_LOCATION || 'Buenos Aires, Argentina';
   const githubUrl = process.env.NEXT_PUBLIC_GITHUB_URL || 'https://github.com/jciasenza';
   const linkedinUrl = process.env.NEXT_PUBLIC_LINKEDIN_URL || 'https://www.linkedin.com/in/juan-carlos-iasenza-8119501a9/';
 
@@ -253,7 +254,20 @@ export default function Hero() {
                   },
                 })}
               >
+                <WhatsApp sx={{ verticalAlign: 'middle', fontSize: 16, mr: 0.5 }} />
                 {whatsapp}
+              </Box>
+              <Box
+                sx={(theme) => ({
+                  color: theme.palette.text.secondary,
+                  fontSize: '0.9rem',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 0.5,
+                })}
+              >
+                <LocationOn sx={{ fontSize: 16 }} />
+                {location}
               </Box>
             </Box>
           </Box>

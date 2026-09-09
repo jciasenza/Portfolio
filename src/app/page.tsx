@@ -7,6 +7,7 @@ import FeaturedProjects from '@/components/FeaturedProjects';
 import Projects from '@/components/Projects';
 import CV from '@/components/CV';
 import Footer from '@/components/Footer';
+import PortfolioChat from '@/components/PortfolioChat';
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         <CV />
       </Box>
       <Footer />
+      <PortfolioChat />
     </Box>
   );
 }

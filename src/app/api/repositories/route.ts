@@ -1,7 +1,8 @@
 import { NextResponse } from 'next/server';
 
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
-const GITHUB_USERNAME = process.env.GITHUB_USERNAME || 'octocat'; // Cambiar a tu usuario
+const GITHUB_USERNAME = process.env.GITHUB_USERNAME || 'jciasenza'; // Cambiar a tu usuario
+const CACHE_SECONDS = 3600;
 
 export async function GET() {
   try {
@@ -26,9 +27,18 @@ export async function GET() {
     const perPage = 100;
 
     while (true) {
-      const response = await fetch(`${urlBase}?per_page=${perPage}&page=${page}`, { headers });
+      const response = await fetch(`${urlBase}?per_page=${perPage}&page=${page}`, {
+        headers,
+        next: { revalidate: CACHE_SECONDS },
+      });
 
       if (!response.ok) {
+        if (response.status === 403) {
+          return NextResponse.json(
+            { error: 'GitHub alcanzó el límite de solicitudes. Configura GITHUB_TOKEN para continuar.' },
+            { status: 429, headers: { 'Retry-After': '3600' } }
+          );
+        }
         throw new Error(`GitHub API error: ${response.status}`);
       }
 
@@ -51,7 +61,23 @@ export async function GET() {
         let languages = {} as Record<string, number>;
 
         try {
-          const languagesResponse = await fetch(repo.languages_url, { headers });
+          if (!GITHUB_TOKEN) {
+            return {
+              id: repo.id,
+              name: repo.name,
+              description: repo.description,
+              url: repo.homepage || repo.html_url,
+              html_url: repo.html_url,
+              language: repo.language,
+              stargazers_count: repo.stargazers_count,
+              languages,
+            };
+          }
+
+          const languagesResponse = await fetch(repo.languages_url, {
+            headers,
+            next: { revalidate: CACHE_SECONDS },
+          });
 
           if (languagesResponse.ok) {
             languages = await languagesResponse.json();
