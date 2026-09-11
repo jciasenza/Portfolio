@@ -152,7 +152,7 @@ export default function FeaturedProjects() {
                     sx={{
                       position: 'relative',
                       display: 'block',
-                      height: 180,
+                      height: 235,
                       overflow: 'hidden',
                       backgroundColor: 'action.hover',
                       '&::after': {
