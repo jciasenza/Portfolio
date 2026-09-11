@@ -28,6 +28,7 @@ export default function FeaturedProjects() {
       url: 'https://panorama.aulasneo.com/',
       githubRepo: '',
       technologies: ['React', 'TypeScript', 'Python', 'Django', 'Sass'],
+      image: '/images/projects/panorama.png',
     },
     {
       title: 'Owly',
@@ -37,6 +38,7 @@ export default function FeaturedProjects() {
       url: 'https://www.owly.aulasneo.com/',
       githubRepo: '',
       technologies: ['React', 'TypeScript', 'Python', 'Django', 'Sass'],
+      image: '/images/projects/owly.png',
     },
   ];
 
@@ -138,6 +140,64 @@ export default function FeaturedProjects() {
                   },
                 })}
               >
+                {project.image && (
+                  <Box
+                    component="a"
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Abrir ${project.title}`}
+                    sx={{
+                      position: 'relative',
+                      display: 'block',
+                      height: 180,
+                      overflow: 'hidden',
+                      backgroundColor: 'action.hover',
+                      '&::after': {
+                        content: '"Abrir proyecto"',
+                        position: 'absolute',
+                        inset: 0,
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        gap: 1,
+                        color: '#fff',
+                        fontWeight: 600,
+                        letterSpacing: '0.02em',
+                        backgroundColor: 'rgba(15, 23, 42, 0.68)',
+                        opacity: 0,
+                        transition: 'opacity 220ms ease',
+                      },
+                      '&:hover::after, &:focus-visible::after': {
+                        opacity: 1,
+                      },
+                      '&:hover img, &:focus-visible img': {
+                        transform: 'scale(1.07)',
+                      },
+                      '&:focus-visible': {
+                        outline: '3px solid',
+                        outlineColor: 'primary.main',
+                        outlineOffset: '-3px',
+                      },
+                    }}
+                  >
+                    <Box
+                      component="img"
+                      src={project.image}
+                      alt={`Vista previa de ${project.title}`}
+                      onError={(event) => {
+                        event.currentTarget.style.display = 'none';
+                      }}
+                      sx={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover',
+                        display: 'block',
+                        transition: 'transform 320ms ease',
+                      }}
+                    />
+                  </Box>
+                )}
                 <CardContent sx={{ flex: 1 }}>
                   <Typography 
                     variant="h5" 

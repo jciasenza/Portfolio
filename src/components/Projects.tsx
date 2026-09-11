@@ -23,10 +23,12 @@ interface Repository {
   name: string;
   description: string;
   url: string;
+  homepage?: string | null;
   html_url: string;
   language: string;
   stargazers_count: number;
   languages?: Record<string, number>;
+  image?: string;
 }
 
 const LANGUAGE_COLORS: Record<string, string> = {
@@ -143,6 +145,61 @@ export default function Projects() {
                       },
                     })}
                   >
+                    <Box
+                      component="a"
+                      href={repo.homepage || repo.html_url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Abrir ${repo.name}`}
+                      sx={{
+                        position: 'relative',
+                        display: 'block',
+                        overflow: 'hidden',
+                        backgroundColor: 'action.hover',
+                        '&::after': {
+                          content: '"Abrir proyecto"',
+                          position: 'absolute',
+                          inset: 0,
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          color: '#fff',
+                          fontWeight: 600,
+                          letterSpacing: '0.02em',
+                          backgroundColor: 'rgba(15, 23, 42, 0.68)',
+                          opacity: 0,
+                          transition: 'opacity 220ms ease',
+                        },
+                        '&:hover::after, &:focus-visible::after': {
+                          opacity: 1,
+                        },
+                        '&:hover img, &:focus-visible img': {
+                          transform: 'scale(1.07)',
+                        },
+                        '&:focus-visible': {
+                          outline: '3px solid',
+                          outlineColor: 'primary.main',
+                          outlineOffset: '-3px',
+                        },
+                      }}
+                    >
+                      <Box
+                        component="img"
+                        src={`/images/projects/${encodeURIComponent(repo.name)}.png`}
+                        alt={`Vista previa de ${repo.name}`}
+                        onError={(event) => {
+                          event.currentTarget.onerror = null;
+                          event.currentTarget.src = repo.image || '';
+                        }}
+                        sx={{
+                          width: '100%',
+                          height: '100%',
+                          objectFit: 'cover',
+                          display: 'block',
+                          transition: 'transform 320ms ease',
+                        }}
+                      />
+                    </Box>
                     <CardContent sx={{ flex: 1 }}>
                       <Typography variant="h6" component="h3" gutterBottom sx={(theme) => ({ fontWeight: 600, color: theme.palette.text.primary })}>
                         {repo.name}

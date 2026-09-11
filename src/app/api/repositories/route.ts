@@ -67,10 +67,12 @@ export async function GET() {
               name: repo.name,
               description: repo.description,
               url: repo.homepage || repo.html_url,
+              homepage: repo.homepage || null,
               html_url: repo.html_url,
               language: repo.language,
               stargazers_count: repo.stargazers_count,
               languages,
+              image: `https://opengraph.githubassets.com/1/${GITHUB_USERNAME}/${repo.name}`,
             };
           }
 
@@ -91,10 +93,12 @@ export async function GET() {
           name: repo.name,
           description: repo.description,
           url: repo.homepage || repo.html_url,
+          homepage: repo.homepage || null,
           html_url: repo.html_url,
           language: repo.language,
           stargazers_count: repo.stargazers_count,
           languages,
+          image: `https://opengraph.githubassets.com/1/${GITHUB_USERNAME}/${repo.name}`,
         };
       })
     );
