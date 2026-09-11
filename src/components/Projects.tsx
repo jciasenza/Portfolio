@@ -60,6 +60,7 @@ export default function Projects() {
       empty: 'No hay repositorios disponibles. Configura tu usuario de GitHub.',
       viewCode: 'Ver Código',
       visit: 'Visitar',
+      openProject: 'Abrir proyecto',
     },
     en: {
       title: 'My Projects',
@@ -67,6 +68,7 @@ export default function Projects() {
       empty: 'No repositories available. Configure your GitHub user.',
       viewCode: 'View Code',
       visit: 'Visit',
+      openProject: 'Open project',
     },
   };
 
@@ -150,14 +152,14 @@ export default function Projects() {
                       href={repo.homepage || repo.html_url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      aria-label={`Abrir ${repo.name}`}
+                      aria-label={`${t.openProject}: ${repo.name}`}
                       sx={{
                         position: 'relative',
                         display: 'block',
                         overflow: 'hidden',
                         backgroundColor: 'action.hover',
                         '&::after': {
-                          content: '"Abrir proyecto"',
+                          content: `"${t.openProject}"`,
                           position: 'absolute',
                           inset: 0,
                           display: 'flex',

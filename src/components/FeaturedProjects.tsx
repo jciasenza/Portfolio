@@ -28,7 +28,7 @@ export default function FeaturedProjects() {
       url: 'https://panorama.aulasneo.com/',
       githubRepo: '',
       technologies: ['React', 'TypeScript', 'Python', 'Django', 'Sass'],
-      image: '/images/projects/panorama.png',
+      image: '/images/projects/Panorama.png',
     },
     {
       title: 'Owly',
@@ -38,7 +38,7 @@ export default function FeaturedProjects() {
       url: 'https://www.owly.aulasneo.com/',
       githubRepo: '',
       technologies: ['React', 'TypeScript', 'Python', 'Django', 'Sass'],
-      image: '/images/projects/owly.png',
+      image: '/images/projects/Owly.png',
     },
   ];
 
@@ -46,10 +46,12 @@ export default function FeaturedProjects() {
     es: {
       featuredProjects: 'Proyectos Destacados',
       viewProject: 'Ver Proyecto',
+      openProject: 'Abrir proyecto',
     },
     en: {
       featuredProjects: 'Featured Projects',
       viewProject: 'View Project',
+      openProject: 'Open project',
     },
   };
 
@@ -146,7 +148,7 @@ export default function FeaturedProjects() {
                     href={project.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label={`Abrir ${project.title}`}
+                    aria-label={`${t.openProject}: ${project.title}`}
                     sx={{
                       position: 'relative',
                       display: 'block',
@@ -154,7 +156,7 @@ export default function FeaturedProjects() {
                       overflow: 'hidden',
                       backgroundColor: 'action.hover',
                       '&::after': {
-                        content: '"Abrir proyecto"',
+                        content: `"${t.openProject}"`,
                         position: 'absolute',
                         inset: 0,
                         display: 'flex',
