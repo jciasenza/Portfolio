@@ -9,6 +9,13 @@
   "summary": "Full Stack Developer with 4+ years of experience developing modern web applications. Solid knowledge in React, JavaScript, Node.js, and Python. Experience working with e-learning platforms and REST APIs.",
   "experience": [
     {
+      "position": "Full Stack Developer",
+      "company": "Ample One Technologies",
+      "period": "2026 - Freelance",
+      "description": "Development of a web platform for interacting with AI-powered characters, designed to provide personalized conversations and interactive experiences.\nThe application allows users to explore a character catalog, discover different profiles, and interact through an AI chat that incorporates memory to maintain conversation continuity.\nMy work: Development and implementation of frontend interfaces, Supabase integration, and construction of components for the user experience.\nKey features:\nCharacter catalog with navigation and filters.\nInteractive chat interface with AI characters.\nConversational experiences with memory.\nResponsive design and intuitive user experience.",
+      "technologies": ["React", "JavaScript", "Vite", "Vercel","Supabase", "CSS"]
+    },
+    {
       "position": "Modern Interfaces Developer",
       "company": "Aulasneo Owly",
       "period": "2025 - 2026",

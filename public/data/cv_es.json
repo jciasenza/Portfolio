@@ -9,6 +9,13 @@
   "summary": "Desarrollador Full Stack con 4+ años de experiencia desarrollando aplicaciones web modernas. Sólido conocimiento en React, JavaScript, Node.js y Python. Experiencia trabajando con plataformas e-learning y REST APIs.",
   "experience": [
     {
+      "position": "Desarrollador Full Stack",
+      "company": "Ample One Technologies",
+      "period": "2026 - Freelance",
+      "description": "Desarrollo de una plataforma web de interacción con personajes impulsados por inteligencia artificial, diseñada para ofrecer conversaciones personalizadas y experiencias interactivas.\nLa aplicación permite explorar un catálogo de personajes, descubrir diferentes perfiles e interactuar mediante un chat con IA que incorpora memoria para mantener la continuidad de las conversaciones.\nMi trabajo: Desarrollo e implementación de interfaces frontend, integración con Supabase y construcción de componentes para la experiencia de usuario.\nCaracterísticas principales:\nCatálogo de personajes con navegación y filtros.\nInterfaz de chat interactiva con personajes de IA.\nExperiencias conversacionales con memoria.\nDiseño responsive y experiencia de usuario intuitiva.",
+      "technologies": ["React", "JavaScript", "Vite", "Vercel","Supabase", "CSS"]
+    },
+    {
       "position": "Desarrollador de interfaces modernas",
       "company": "Aulasneo Owly",
       "period": "2025 - 2026",
@@ -36,11 +43,18 @@
       "position": "Operador de Sistemas",
       "company": "Tia S.A.",
       "period": "1989 - 1994",
-      "description": "Operador de sistemas de codigos de barras y tareas administrativas."
+      "description": "Operador de sistemas de códigos de barras y tareas administrativas."
     }
   ],
   "skills": {
-    "frontend": ["HTML, CSS, JavaScript", "React", "Next.js", "Sass","Bootstrap","Material-UI"],
+    "frontend": [
+      "HTML, CSS, JavaScript",
+      "React",
+      "Next.js",
+      "Sass",
+      "Bootstrap",
+      "Material-UI"
+    ],
     "backend": ["Node.js", "Express", "Python", "Django"],
     "databases": ["PostgreSQL", "SQLite", "MongoDB"],
     "apis": ["REST APIs", "integración de servicios"],
